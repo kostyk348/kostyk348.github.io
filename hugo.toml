@@ -1,0 +1,51 @@
+baseURL = "https://kostyk348.github.io"
+title = "Konstantin"
+theme = "PaperMod"
+languageCode = "en"
+defaultContentLanguage = "en"
+
+enableInlineShortcodes = true
+
+[params]
+  description = "Automation Engineer · Linux Enthusiast · Graphics Programmer · AI Research Hobbyist"
+  keywords = "linux, automation, graphics, ai, embedded, open source"
+  author = "Konstantin"
+
+  homeInfoParams = {
+    Title = "Hi, I'm Konstantin 👋",
+    Content = "Automation Engineer — Linux Enthusiast — Graphics Programmer — AI Research Hobbyist\n\nI build unusual software projects combining low-level programming, computer graphics, automation, AI, and retro computing."
+  }
+
+  socialIcons = [
+    { name = "github", url = "https://github.com/kostyk348" },
+  ]
+
+  # Theme settings
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = false
+  ShowBreadCrumbs = false
+  ShowCodeCopyButtons = true
+  ShowWordCount = false
+
+[menu]
+  [[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects/"
+    weight = 10
+  [[menu.main]]
+    identifier = "guestbook"
+    name = "Guestbook"
+    url = "/guestbook/"
+    weight = 20
+  [[menu.main]]
+    identifier = "forum"
+    name = "Forum"
+    url = "https://github.com/kostyk348/kostyk348/discussions"
+    weight = 30
+  [[menu.main]]
+    identifier = "github"
+    name = "GitHub"
+    url = "https://github.com/kostyk348"
+    weight = 40
