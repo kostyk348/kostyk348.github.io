@@ -5,16 +5,20 @@ languageCode = "en"
 defaultContentLanguage = "en"
 
 enableInlineShortcodes = true
+ignoreLogs = ['warning-goldmark-raw-html']
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
 [params]
-  description = "Automation Engineer · Linux Enthusiast · Graphics Programmer · AI Research Hobbyist"
-  keywords = "linux, automation, graphics, ai, embedded, open source"
+  description = "Automation Engineer - Linux Enthusiast - Graphics Programmer - AI Research Hobbyist"
+  keywords = ["linux", "automation", "graphics", "ai", "embedded", "open source"]
   author = "Konstantin"
 
-  homeInfoParams = {
-    Title = "Hi, I'm Konstantin 👋",
-    Content = "Automation Engineer — Linux Enthusiast — Graphics Programmer — AI Research Hobbyist\n\nI build unusual software projects combining low-level programming, computer graphics, automation, AI, and retro computing."
-  }
+  homeInfoParams.Title = "Hi, I'm Konstantin"
+  homeInfoParams.Content = "Automation Engineer - Linux Enthusiast - Graphics Programmer - AI Research Hobbyist\n\nI build unusual software projects combining low-level programming, computer graphics, automation, AI, and retro computing."
 
   socialIcons = [
     { name = "github", url = "https://github.com/kostyk348" },
