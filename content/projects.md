@@ -18,6 +18,16 @@ DeepLX backend — no API key. Every line keeps its exact position and rotation.
 
 ---
 
+## Input & Ergonomics
+
+### 🎹 DSO Layout
+**Colemak-DH + Optimized Russian** — ergonomic keyboard layout for bilingual typing. Simulated annealing optimizer found optimal Russian letter placement (97.65% coverage). 47% less finger travel, 63% fewer same-finger bigrams vs QWERTY+ЙЦУКЕН. Navigation layer with CapsLock.  
+`keyboard-layout` `ergonomics` `colemak` `russian`
+
+[View on GitHub](https://github.com/kostyk348/dso-layout)
+
+---
+
 ## Real-Time Systems & Embedded
 
 ### ⚙️ DSO-Controllab
