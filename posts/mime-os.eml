@@ -1,0 +1,51 @@
+From: <mime-os@system.local>
+To: <kernel@system.local>
+Subject: MIME-OS: один файл для всего
+X-Entity-ID: mime-os
+X-Tag: mime-os, rust, local-first
+X-Timestamp: 1786897695
+X-EML-Version: 0.1.0
+X-Index-Offset: 00000000000000002115
+X-Index-Length: 00000000000000000105
+Content-Type: multipart/mixed; boundary="EMLBOX_v1_18cc55fca5a1582d"
+
+--EMLBOX_v1_18cc55fca5a1582d
+Content-Type: text/markdown; name="body.md"
+Content-ID: <body>
+X-Encoding: raw
+
+# Пост: MIME-OS — один файл для всего
+
+MIME-OS превращает .eml-контейнер в универсальный формат хранения: база,
+приложение, память агента и даже игра — один файл с hash-chain и append-only
+дельта-логом.
+
+**Что уже работает (v0.5):**
+
+- single-file контейнер: mmap-ридер, two-level index, дельта-лог с sha256-цепочкой
+- KV-таблицы, теговая БД (eml-tag), EML-FS, IPC-шина с runner'ом
+- сетевой delta-sync: per-writer chains, LWW merge, TCP P2P, SMTP-мост (письма)
+- X-Encoding: deflate и aes-256-gcm — база целиком шифруется
+- клеточный реверс без Ghidra: objdump → .eml-граф функций, волна типов
+- GUI-просмотрщик на egui
+
+**Почему .eml?** Формат один для диска, памяти и сети — данные не меняют
+форму. Хеш-цепочка даёт целостность и версионирование, дельты — синк между
+устройствами, письма — транспортировку по почте без серверов.
+
+Этот сайт собирается из .eml-постов: каждая запись — контейнер с заголовками
+и markdown-телом. Обновление — одна команда `./update.sh`.
+--EMLBOX_v1_18cc55fca5a1582d
+Content-Type: application/x-emlbox-index+json
+Content-ID: <eml-index>
+X-Encoding: raw
+
+{"v":1,"sections":[{"id":"body","ct":"text/markdown","name":"body.md","off":478,"len":1516,"enc":"raw"}]}--EMLBOX_v1_18cc55fca5a1582d--
+{"v":1,"entries":[]}X-EMLBox-Trailer: v1
+X-Entity-ID: mime-os
+X-Tail-Seq: 0
+X-Tail-Hash: 
+X-Base-Hash: 664594cff1b366216c6a41cab709bfc7e28f2540dc31a4875ddfc5606461224e
+X-Tail-Index-Offset: 2252
+X-Tail-Index-Length: 20
+                                                                                                                                                                                                                                                                                                                   
