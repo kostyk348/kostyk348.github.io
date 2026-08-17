@@ -1,30 +1,31 @@
 ---
-title: "MIME-OS: один файл для всего"
-date: 2026-08-16
+title: "MIME-OS: one file for everything"
+date: 2026-08-17
 tags:
     - "mime-os"
     - "rust"
     - "local-first"
 ---
 
-# Пост: MIME-OS — один файл для всего
+# MIME-OS: one file for everything
 
-MIME-OS превращает .eml-контейнер в универсальный формат хранения: база,
-приложение, память агента и даже игра — один файл с hash-chain и append-only
-дельта-логом.
+MIME-OS turns an .eml container into a universal storage format: a database,
+an app, an agent's memory, even a game — a single file with a hash chain and
+an append-only delta log.
 
-**Что уже работает (v0.5):**
+**What works today (v0.5):**
 
-- single-file контейнер: mmap-ридер, two-level index, дельта-лог с sha256-цепочкой
-- KV-таблицы, теговая БД (eml-tag), EML-FS, IPC-шина с runner'ом
-- сетевой delta-sync: per-writer chains, LWW merge, TCP P2P, SMTP-мост (письма)
-- X-Encoding: deflate и aes-256-gcm — база целиком шифруется
-- клеточный реверс без Ghidra: objdump → .eml-граф функций, волна типов
-- GUI-просмотрщик на egui
+- single-file container: mmap reader, two-level index, delta log with sha256 chain
+- KV tables, tag database (eml-tag), EML-FS, IPC bus with a runner
+- network delta-sync: per-writer chains, LWW merge, TCP P2P, SMTP bridge (letters)
+- X-Encoding: deflate and aes-256-gcm — the whole database can be encrypted
+- cellular reverse engineering without Ghidra: objdump -> .eml function graph,
+  type waves
+- egui viewer (GUI)
 
-**Почему .eml?** Формат один для диска, памяти и сети — данные не меняют
-форму. Хеш-цепочка даёт целостность и версионирование, дельты — синк между
-устройствами, письма — транспортировку по почте без серверов.
+**Why .eml?** One format for disk, memory and network — data never changes
+shape. The hash chain gives integrity and versioning, deltas give sync between
+devices, letters give mail transport without servers.
 
-Этот сайт собирается из .eml-постов: каждая запись — контейнер с заголовками
-и markdown-телом. Обновление — одна команда `./update.sh`.
+This site is built from .eml posts: each entry is a container with headers and
+a markdown body. Updating is a single command: `./update.sh`.

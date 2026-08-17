@@ -1,5 +1,5 @@
 ---
-title: "Клеточный реверс без Ghidra"
+title: "Cellular reverse engineering without Ghidra"
 date: 2026-08-17
 tags:
     - "mime-os"
@@ -7,15 +7,16 @@ tags:
     - "rust"
 ---
 
-# Клеточный реверс без Ghidra
+# Cellular reverse engineering without Ghidra
 
-Каждая функция бинарника — отдельный .eml: call-граф в заголовках,
-типы распространяются волной по References с call-site dataflow.
+Each function of a binary becomes its own .eml cell: the call graph lives in
+headers, types propagate as a wave over References with call-site dataflow.
 
 ```bash
-emlbox rev game.exe cells          # objdump -> .eml-граф
-emlbox rev wave cells net_send arg1 void* 3   # волна типов
-emlbox rev diff cells_v1 cells_v2  # диффинг версий
+emlbox rev game.exe cells          # objdump -> .eml function graph
+emlbox rev wave cells net_send arg1 void* 3   # type wave
+emlbox rev diff cells_v1 cells_v2  # version diffing
 ```
 
-LLM подключается через rev-mcp: читает только соседей клетки.
+LLMs connect through rev-mcp: they read only the neighbours of a cell, not the
+whole disassembly — a point-wise context instead of a 500MB dump.

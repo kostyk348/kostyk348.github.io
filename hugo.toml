@@ -14,42 +14,55 @@ ignoreLogs = ['warning-goldmark-raw-html']
 
 [params]
   description = "Automation Engineer - Linux Enthusiast - Graphics Programmer - AI Research Hobbyist"
-  keywords = ["linux", "automation", "graphics", "ai", "embedded", "open source"]
+  keywords = ["linux", "automation", "graphics", "ai", "embedded", "open source", "rust", "local-first"]
   author = "Konstantin"
 
-  homeInfoParams.Title = "Hi, I'm Konstantin"
-  homeInfoParams.Content = "Automation Engineer - Linux Enthusiast - Graphics Programmer - AI Research Hobbyist\n\nI build unusual software projects combining low-level programming, computer graphics, automation, AI, and retro computing."
+  # Визитка на главной
+  homeInfoParams.Title = "Hi, I'm Konstantin 👋"
+  homeInfoParams.Content = """Systems engineer building **unusual software** at the intersection of low-level programming, graphics, automation and AI.
+
+Core interests: **MIME-OS** — everything as a single `.eml` file (databases, apps, sync, RE tooling); deterministic real-time systems; zero-copy SIMD; agent architectures.
+
+Recent work: [MIME-OS ecosystem](/projects/), cellular reverse engineering without Ghidra, g-tools (10× faster `strings`)."""
 
   socialIcons = [
     { name = "github", url = "https://github.com/kostyk348" },
+    { name = "email", url = "mailto:konstantin@kostyk348.dev" },
   ]
 
   # Theme settings
+  defaultTheme = "auto"
   ShowReadingTime = true
   ShowShareButtons = false
   ShowPostNavLinks = false
   ShowBreadCrumbs = false
   ShowCodeCopyButtons = true
   ShowWordCount = false
+  ShowToc = true
 
 [menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 5
   [[menu.main]]
     identifier = "projects"
     name = "Projects"
     url = "/projects/"
     weight = 10
   [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 15
+  [[menu.main]]
     identifier = "guestbook"
     name = "Guestbook"
     url = "/guestbook/"
     weight = 20
   [[menu.main]]
-    identifier = "forum"
-    name = "Forum"
-    url = "https://github.com/kostyk348/kostyk348/discussions"
-    weight = 30
-  [[menu.main]]
     identifier = "github"
     name = "GitHub"
     url = "https://github.com/kostyk348"
-    weight = 40
+    weight = 30
