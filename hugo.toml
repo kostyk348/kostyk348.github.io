@@ -52,6 +52,11 @@ Recent work: [MIME-OS ecosystem](/projects/), cellular reverse engineering witho
     url = "/projects/"
     weight = 10
   [[menu.main]]
+    identifier = "gallery"
+    name = "Gallery"
+    url = "/gallery/"
+    weight = 12
+  [[menu.main]]
     identifier = "about"
     name = "About"
     url = "/about/"
