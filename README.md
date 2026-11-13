@@ -1,11 +1,20 @@
+<div align="center">
+
+<img src="docs/banner.svg" alt="kostyk348.github.io banner" width="1000">
+
 # kostyk348.github.io
+
+### Personal website — Hugo + GitHub Pages. DSO projects, blog, and experiments.
 
 [![CI](https://github.com/kostyk348/kostyk348.github.io/actions/workflows/ci.yml/badge.svg)](https://github.com/kostyk348/kostyk348.github.io/actions/workflows/ci.yml)
 [![Release](https://img.shields.io/github/v/release/kostyk348/kostyk348.github.io?sort=semver&color=blue)](https://github.com/kostyk348/kostyk348.github.io/releases)
 [![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/kostyk348/kostyk348.github.io/blob/main/LICENSE)
 [![Last commit](https://img.shields.io/github/last-commit/kostyk348/kostyk348.github.io?branch=main)](https://github.com/kostyk348/kostyk348.github.io/commits/main)
 
-Personal website — Hugo + GitHub Pages. DSO projects, blog, and experiments.
+</div>
+
+---
+
 
 ## Status
 
